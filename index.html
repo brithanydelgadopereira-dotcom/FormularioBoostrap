@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 form-container shadow-sm">
+                <h4 class="mb-4"><strong>FORMULARIO</strong></h4>
+
+                <form class="needs-validation" novalidate>
+                    <div class="row mb-3 align-items-center">
+                        <label for="nombres" class="col-sm-3 col-form-label label-column">Nombres:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="nombres" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 align-items-center">
+                        <label for="cedula" class="col-sm-3 col-form-label label-column">Cédula:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="cedula" pattern="[0-9]+"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, '');" placeholder="Solo números"
+                                required>
+                            <div class="form-text">Ingrese solo dígitos numéricos.</div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 align-items-center">
+                        <label for="fecha" class="col-sm-3 col-form-label label-column">Fecha de nacimiento:</label>
+                        <div class="col-sm-6">
+                            <input type="date" class="form-control" id="fecha" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 align-items-center">
+                        <label for="ciudad" class="col-sm-3 col-form-label label-column">Ciudad:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="ciudad">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 align-items-center">
+                        <label for="correo" class="col-sm-3 col-form-label label-column">Correo electrónico:</label>
+                        <div class="col-sm-6">
+                            <input type="email" class="form-control" id="correo" placeholder="ejemplo@correo.com"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 align-items-center">
+                        <label for="telefono" class="col-sm-3 col-form-label label-column">Teléfono:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="telefono" pattern="[0-9]+"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, '');" placeholder="Ej: 0999999999"
+                                required>
+                            <div class="form-text">Ingrese solo dígitos numéricos.</div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="direccion" class="col-sm-3 col-form-label label-column">Dirección:</label>
+                        <div class="col-sm-6">
+                            <textarea class="form-control" id="direccion" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 align-items-center">
+                        <label class="col-sm-3 col-form-label label-column">Estado Civil:</label>
+                        <div class="col-sm-6">
+                            <select class="form-select" required>
+                                <option value="" selected disabled>Seleccione un estado civil</option>
+                                <option value="1">Soltero/a</option>
+                                <option value="2">Casado/a</option>
+                                <option value="3">Divorciado/a</option>
+                                <option value="4">Viudo/a</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 align-items-center">
+                        <label class="col-sm-3 col-form-label label-column">Etnia:</label>
+                        <div class="col-sm-6">
+                            <select class="form-select" required>
+                                <option value="" selected disabled>Seleccione una etnia</option>
+                                <option value="1">Mestizo</option>
+                                <option value="2">Afroecuatoriano</option>
+                                <option value="3">Indígena</option>
+                                <option value="4">Blanco</option>
+                                <option value="5">Montubio</option>
+                                <option value="6">Otros</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3 align-items-center">
+                        <label class="col-sm-3 col-form-label label-column">Género:</label>
+                        <div class="col-sm-6">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="genero" id="masculino"
+                                    value="masculino" required>
+                                <label class="form-check-label" for="masculino">Masculino</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="genero" id="femenino"
+                                    value="femenino">
+                                <label class="form-check-label" for="femenino">Femenino</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <label class="col-sm-3 col-form-label label-column">Usted:</label>
+                        <div class="col-sm-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="fuma">
+                                <label class="form-check-label" for="fuma">Fuma</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="alcohol">
+                                <label class="form-check-label" for="alcohol">Toma alcohol</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="drogas">
+                                <label class="form-check-label" for="drogas">Consume drogas</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-6">
+                            <button type="submit" class="btn btn-primary px-4">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
